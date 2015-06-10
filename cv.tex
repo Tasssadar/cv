@@ -1,0 +1,123 @@
+% LaTeX file for resume
+% This file uses the resume document class (res.cls)
+
+\documentclass[margin]{res}
+% the margin option causes section titles to appear to the left of body text
+\textwidth=5.2in % increase textwidth to get smaller right margin
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\usepackage[bookmarksopen,colorlinks,plainpages=false,linkcolor=blue,urlcolor=blue,citecolor=black,filecolor=black,menucolor=black,unicode=true]{hyperref}
+\hypersetup{
+ colorlinks=true,
+ urlcolor=black
+}
+
+\renewcommand\refname{\vskip -1cm}
+
+\renewcommand{\labelitemi}{$\diamond$}
+\linespread{1.2}
+
+\def\sectionfont{} % v původní šabloně res.cls je název sekce tučnej
+
+
+\begin{document}
+
+% Center the name over the entire width of resume:
+ \moveleft.5\hoffset\centerline{\large\bf Vojtěch Boček}
+%\moveleft.5\hoffset\centerline{}
+% Draw a horizontal line the whole width of resume:
+ \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+ \address{\url{http://tasssadar.github.io} \\ \href{mailto:vbocek@gmail.com}{vbocek@gmail.com} \\ +420 722 299 095}
+\address{~}
+
+\begin{resume}
+
+\bigskip
+
+\hypersetup{
+ colorlinks=true,
+ urlcolor=blue
+}
+
+\section{EDUCATION}
+{\bf Faculty of Informatics \\
+at Masaryk University, Brno} \hfill{2014 - 2015} \\
+\textit{Programmable Technical Structures} \\
+\\
+{\bf Střední průmyslová škola \\
+a Vyšší odborná školy technická Brno, Sokolská 1} \hfill{2010 - 2014} \\
+\textit{Technické lyceum}
+
+\section{EXPERIENCE}
+ {\bf C/C++ programmer}
+ \begin{itemize} \itemsep -2pt
+    \item Part-time low-level Android developer at AVG Technologies CZ \hfill{2014 - now}
+    \item Author of MultiROM\hyperref[multirom]{[1]} -- low-level software modification \hfill{2012 - now} \\ for Android devices which implements multiboot
+        \begin{itemize}
+            \item \textit{over 35,000 active installations (June 2015)}
+            \item \textit{successful crowdfunding campaign on Indiegogo.com}
+            \item \textit{won the first prize in national student \\ competition "SOČ" \hyperref[soc]{[2]} in 2014}
+            \item \textit{participated in\\Intel International Science and Engineering Fair \hyperref[isef]{[3]} in 2015}
+        \end{itemize}
+    \item Author of microprocessor application development kit Lorris\hyperref[lorris]{[4]} \hfill{2011 - now}
+        \begin{itemize}
+            \item \textit{won the first prize in national student \\ competition "SOČ" \hyperref[soc]{[2]} in 2013}
+            \item \textit{won the first prize in international student \\ competition "BYSCC" \hyperref[byscc]{[5]} in 2014 in Beijing}
+        \end{itemize}
+    \item Software for autonomous robots for student competitions
+        \begin{itemize}
+            \item \textit{4th place (of 11 total) in national round of Eurobot\hyperref[eurobot]{[6]} in 2011}
+            \item \textit{2nd place (of 22 total) in Line follower competition \\ on national Robotic day\hyperref[day]{[7]} in 2012 and 2013}
+            \item \textit{2nd place (of 7 total) in "Bear rescue" competition \\ on national Robotic day\hyperref[day2]{[8]} in 2014}
+        \end{itemize}
+    \item Core developer on a private MMORPG game server \hfill{2009 - 2011}
+ \end{itemize}
+ \newpage
+ {\bf Java programmer}
+ \begin{itemize} \itemsep -2pt
+    \item MultiROM Manager android app \hfill{2012 - now}
+        \begin{itemize}
+            \item \textit{App for the MultiROM modification}
+            \item \textit{Installs, updates and manages the modificiation}
+        \end{itemize}
+    \item Lorris mobile android app\hfill{2011 - now}
+        \begin{itemize}
+            \item \textit{Companion app for Lorris}
+            \item \textit{Contains the most important tools for \\ microprocessor application development}
+        \end{itemize}
+ \end{itemize}
+ {\bf Other}
+ \begin{itemize} \itemsep -2pt
+    \item Internship in Red Hat Brno on the Fedora QA team \hfill{summer 2013}
+ \end{itemize}
+
+\section{SKILLS}
+{\bf Programming:} C, C++ (w/ Qt), Go, Java (on Android), Python, Bash,\\web things (HTML, PHP, CSS, JavaScript)\vspace{1.3mm}\\
+{\bf Languages:} English (advanced), Russian (basic)\vspace{1.3mm}\\
+{\bf Misc:} uses git as a VCS for his projects most of the time; \\ low-level knowledge of Android OS; experience with management\\of Linux servers; works with MCUs as well as desktop computers;\\likes open-source software\vspace{1.3mm}
+
+\section{HOBBIES}
+Photography and wandering around the woods at night while searching\\for geocaches.
+
+\linespread{1.6}
+\section{LINKS}
+\textit{My Github profile} - \url{https://github.com/Tasssadar} \\
+\\
+\label{multirom}[1] \textit{MultiROM} - \url{http://tasssadar.github.io/#multirom} \\
+\label{soc}[2] \textit{Středoškolská odborná činnost} - \url{http://www.soc.cz/} \\
+\label{isef}[3] \textit{Intel Inernational Science and Engineering Fair} - \\\phantom{[3] }\url{https://student.societyforscience.org/intel-isef} \\
+\label{lorris}[4] \textit{Lorris} - \url{http://tasssadar.github.com/Lorris/} \\
+\label{byscc}[5] \textit{Beijing Youth Science Creation Competition} - \url{http://www.fvtp.cz/?q=node/48} \\
+\label{eurobot}[6] \textit{Eurobot 2011} - \url{http://www.eurobot.cz/eurobot2011.php} \\
+\label{day}[7] \textit{Robotic day} - \url{http://www.roboticday.org} \\
+\label{day2}[8] \textit{Robotic day 2014 results} - \url{http://www.roboticday.org/2014/results/} \\
+
+
+\end{resume}
+\end{document}
